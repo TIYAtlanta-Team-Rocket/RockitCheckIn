@@ -12,7 +12,7 @@ class AttendeeListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Attendees"
     }
     
     override func didReceiveMemoryWarning() {

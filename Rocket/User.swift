@@ -8,15 +8,24 @@
 
 import Foundation
 
-class User {
+struct User {
     var name: String?
     var email: String?
     var password: String?
-    var userID: UUID?
-    var friends: [User]?
-    var events: [Event]?
+    var friends: [String]?
+    var events: [UUID]?
+    var isadmin: Bool = false
     
-    func verifyCredentials(user: User) {
+    static func createUserWithData(name: String, email: String, password: String, friends: [String], events: [UUID]) -> User {
+        var returnUser = User()
         
+        returnUser.email = email
+        returnUser.name = name
+        returnUser.password = password
+        returnUser.friends = friends
+        returnUser.events = events
+        
+        return returnUser
     }
+    
 }
